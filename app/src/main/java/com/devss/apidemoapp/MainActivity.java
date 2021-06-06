@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
                     List<PlaceholderPost> posts = response.body();
                     List<String> list = new ArrayList<String>();
                     for (int i=0; i<posts.size(); i++) {
-                        list.add(i+1+". "+posts.get(i).getTitle().toString());
+                        list.add(posts.get(i).getId()+". "+posts.get(i).getTitle().toString());
                         Log.d("Success", posts.get(i).getTitle().toString());
                     }
                     ArrayAdapter<String> adapter = new ArrayAdapter<String>(MainActivity.this,
